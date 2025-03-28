@@ -72,50 +72,64 @@ REFRESH_KEY=YOUR_REFRESH_TOKEN_KEY
     └── cart.route.js  
 ```
 
-# Api Endpoint
+# API Documentation
 
+## Admin
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/admin/register` | Register a new admin |
+| `PUT` | `/api/promote/:id` | Upgrade user account (admin only) |
 
-### Admin  
-- `POST /api/admin/register` - Register a new admin  
-- `PUT /api/promote/:id` - Upgrade user account (admin only)  
+## Authentication
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/signin` | Sign in a user |
+| `GET` | `/api/refresh` | Refresh token (requires valid cookie) |
 
-### Authentication  
-- `POST /api/signin` - Sign in a user  
-- `GET /api/refresh` - Refresh token (requires valid cookie)  
+## Cart
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/cart` | Add item to cart (requires access) |
+| `GET` | `/api/cart` | Get cart items (requires access) |
+| `PUT` | `/api/cart/:action` | Update item quantity in cart (requires access) |
+| `DELETE` | `/api/cart/clear` | Clear the cart (requires access) |
+| `DELETE` | `/api/cart/:productId` | Remove item from cart (requires access) |
+| `GET` | `/api/cart/:id` | Get cart by ID (admin only) |
 
-### Cart  
-- `POST /api/cart` - Add item to cart (requires access)  
-- `GET /api/cart` - Get cart items (requires access)  
-- `PUT /api/cart/:action` - Update item quantity in cart (requires access)  
-- `DELETE /api/cart/clear` - Clear the cart (requires access)  
-- `DELETE /api/cart/:productId` - Remove item from cart (requires access)  
-- `GET /api/cart/:id` - Get cart by ID (admin only)  
+## Categories
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/category` | Add a new category (admin only) |
+| `GET` | `/api/category` | Get all categories |
+| `PUT` | `/api/category` | Update category (admin only) |
+| `DELETE` | `/api/category` | Delete category (admin only) |
 
-### Categories  
-- `POST /api/category` - Add a new category (admin only)  
-- `GET /api/category` - Get all categories  
-- `PUT /api/category` - Update category (admin only)  
-- `DELETE /api/category` - Delete category (admin only)  
+## Orders
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/order/:cartId` | Place an order (requires access) |
+| `GET` | `/api/order/:customerId` | Get all orders for a user (requires access) |
+| `GET` | `/api/order/single/:id` | Get order by ID (requires access) |
+| `GET` | `/api/order` | View all orders (admin only) |
+| `PUT` | `/api/order/:id/:status` | Update order status (requires access) |
 
-### Orders  
-- `POST /api/order/:cartId` - Place an order (requires access)  
-- `GET /api/order/:customerId` - Get all orders for a user (requires access)  
-- `GET /api/order/single/:id` - Get order by ID (requires access)  
-- `GET /api/order` - View all orders (admin only)  
-- `PUT /api/order/:id/:status` - Update order status (requires access)  
+## Products
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/product` | Get all products |
+| `GET` | `/api/product/category/:value` | Get products by category |
+| `GET` | `/api/product/:id` | Get product by ID |
+| `POST` | `/api/product` | Add a new product (admin only) |
+| `PUT` | `/api/product/:id` | Update product (admin only) |
+| `DELETE` | `/api/product/:id` | Delete product (admin only) |
 
-### Products  
-- `GET /api/product` - Get all products  
-- `GET /api/product/category/:value` - Get products by category  
-- `GET /api/product/:id` - Get product by ID  
-- `POST /api/product` - Add a new product (admin only)  
-- `PUT /api/product/:id` - Update product (admin only)  
-- `DELETE /api/product/:id` - Delete product (admin only)  
-
-### Users  
-- `POST /api/user` - Create a new user account  
-- `PUT /api/user/:id` - Update user account (requires access)  
-- `DELETE /api/user/:id` - Delete user account (requires access)  
+## Users
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/api/user` | Create a new user account |
+| `PUT` | `/api/user/:id` | Update user account (requires access) |
+| `DELETE` | `/api/user/:id` | Delete user account (requires access) |
+  
 
 # Set up Guide
  npm start  
