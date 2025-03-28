@@ -67,12 +67,10 @@ const getCartItem = async (req, res, next) => {
     const user = req.id;
     const isAdmin = bcrypt.compareSync(process.env.ADMINCODE, req.role);
     if (!isAdmin) {
-      const cartList = await cartModel
-        .findOne({ userId: user })
-        .populate({
-          path: "items.productId",
-          select: ["name", "price", "-_id"],
-        });
+      const cartList = await cartModel.findOne({ userId: user }).populate({
+        path: "items.productId",
+        select: ["name", "price", "-_id"],
+      });
       if (!cartList) {
         return res.status(404).json({ message: "Your cart is empty" });
       }
@@ -134,7 +132,7 @@ const updateItemQuantity = async (req, res, next) => {
       newTotalPrice =
         Number(totalPrice) + Number(quantity) * Number(targetItem.price);
     } else {
-        // reduce the quantity
+      // reduce the quantity
       newQuantity = Number(targetItem.quantity) - Number(quantity);
       if (newQuantity <= 0) {
         return res

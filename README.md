@@ -8,7 +8,7 @@ This is a RESTful API for an eCommerce platform built using Node.js, Express, an
 - Product management (CRUD operations)  
 - Shopping cart functionality  
 - Order processing and management  
-- Payment integration (if applicable)  
+- Payment integration 
 - Responsive and scalable architecture  
 
 ## Technologies Used  
