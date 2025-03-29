@@ -150,6 +150,33 @@ REFRESH_KEY=YOUR_REFRESH_TOKEN_KEY
 3. npm start  
 4. http://localhost:(your specified port)
 
-   
+## 🤝 How to Contribute
+
+1. Fork the repository.
+2. Clone your forked repository:
+   ```sh
+   git clone <your_forked_repo_url>
+   ```
+3. Create a new branch for your feature or bug fix:
+   ```sh
+   git checkout -b feature-name
+   ```
+4. Make your changes and commit them:
+   ```sh
+   git commit -m "Added new feature"
+   ```
+5. Push the changes to your forked repository:
+   ```sh
+   git push origin feature-name
+   ```
+6. Create a Pull Request to the main repository.
+
+## 🔍 Review
+
+This project task is to be reviewed and assessed by **Axia Africa Tech**.
+
+---
+
+💡 **For any issues or inquiries, feel free to open an issue or reach out!**
 
 
