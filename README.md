@@ -15,7 +15,7 @@ This is a RESTful API for an eCommerce platform built using Node.js, Express, an
 - **Node.js**: JavaScript runtime for building the server  
 - **Express**: Web framework for Node.js  
 - **MongoDB**: NoSQL database for storing data  
-- **Mongoose**: ODM for MongoDB and Node.js  
+- **Mongoose**: ORM for MongoDB and Node.js  
 - **JWT**: For user authentication  
 - **Nodemon**: For development to automatically restart the server  
 
@@ -154,19 +154,19 @@ REFRESH_KEY=YOUR_REFRESH_TOKEN_KEY
 
 1. Fork the repository.
 2. Clone your forked repository:
-   ```sh
-   git clone <your_forked_repo_url>
+   ```
+   git clone github.com/Timmydevsoft/ecomerce-api
    ```
 3. Create a new branch for your feature or bug fix:
-   ```sh
+   ```
    git checkout -b feature-name
    ```
 4. Make your changes and commit them:
-   ```sh
+   ```
    git commit -m "Added new feature"
    ```
 5. Push the changes to your forked repository:
-   ```sh
+   ```
    git push origin feature-name
    ```
 6. Create a Pull Request to the main repository.
